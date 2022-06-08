@@ -1,0 +1,21 @@
+.faq-container {
+    padding: 10px;
+    background-color: #e7edf2;
+    border: 1px solid #d6e0e8;
+    border-radius: 4px;
+}
+
+#live-faqs-container, #unverified-faqs-container {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #c4cfd7;
+    border-radius: 4px;
+    
+    overflow-y: auto;
+    max-height: 316px;
+}
+
+.faq-answer-input {
+    resize: vertical;
+    max-height: 160px;
+}

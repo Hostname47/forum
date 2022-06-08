@@ -1,0 +1,20 @@
+#contact-messages-box {
+    padding: 8px 12px 8px 8px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #d9d9d9;
+    border-radius: 4px 4px 0 0;
+}
+
+.contact-message-content {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    background-color: #eee;
+}
+
+.more-button-style-1 {
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    padding: 4px;
+    border: 1px solid #cacaca;
+}

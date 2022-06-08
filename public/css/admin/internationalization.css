@@ -1,0 +1,57 @@
+#paths-box {
+    padding: 12px;
+    background-color: white;
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 4px;
+    width: max-content;
+}
+
+#path-to-add-for-i18n-search {
+    width: 500px;
+}
+
+#added-paths-section {
+    overflow-y: auto;
+    max-height: 240px;
+}
+
+#i18n-keys-search-results-container {
+    padding: 12px;
+    background-color: white;
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#i18n-keys-results-area {
+    resize: none;
+    height: 400px;
+    max-height: 400px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#i18n-keys-results-ops-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 55;
+    display: flex;
+    align-items: center;
+    padding: 4px 10px;
+
+    height: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #2d2d2d;
+    border-radius: 3px 3px 0 0;
+}
+
+.paths-to-exclude-container {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #ecf1f4;
+    border: 1px solid #d5dce0;
+}

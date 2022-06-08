@@ -1,0 +1,24 @@
+#register-section {
+    margin: 50px 0;
+}
+
+#auth-viewer-box {
+    box-shadow: 0 0 9px 0 #cecece;
+    border: 1px solid #f7f7f7;
+    width: 380px;
+}
+
+.register-type-switch {
+    cursor: pointer;
+    padding: 3px 6px;
+    border: 1px solid #b9b9b9;
+    border-radius: 3px;
+}
+
+.register-type-switch-selected {
+    border-color: #2CA0FF;
+    background-color: #2CA0FF;
+    color: white;
+    fill: white;
+    cursor: default;
+}

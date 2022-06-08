@@ -1,0 +1,230 @@
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 52px;
+    width: max-content;
+    z-index: 9;
+    width: calc(100% - 260px);
+    background-color: #24292E;
+}
+
+.top-page-title-box {
+    padding: 16px;
+    background-color: #eff2f4;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+#app {
+    padding: 0;
+}
+
+#admin-left-panel {
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 6;
+    height: 100%;
+    left: 0;
+
+    padding: 12px;
+    padding-right: 0;
+    color: rgb(248, 248, 248);
+    min-width: 275px;
+    max-width: 275px;
+    box-sizing: border-box;
+
+    background-color:#1d2328;
+}
+
+.go-to-app {
+    position: absolute;
+    bottom: -18px;
+    left: 28px;
+}
+
+#user-status-suboptions {
+    background-color: #14191e;
+    border-color: #2b343e;
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 4px;
+    top: calc(100% + 6px);
+}
+
+#user-status-suboptions .typical-suboption:hover {
+    background-color: #1e2731;
+}
+
+#admin-um-right-panel {
+    box-sizing: border-box;
+    width: 280px;
+    height: max-content;
+    padding: 10px;
+    min-width: 280px;
+    background-color: rgba(219, 225, 232, 0.04);
+    border: 1px solid #c4ccd0;
+    border-radius: 4px;
+}
+
+#admin-content-box {
+    width: 100%;
+    padding-left: 275px;
+    box-sizing: border-box;
+}
+
+#admin-main-content-box {
+    padding: 16px;
+}
+
+.simple-white-search {
+    border: 1px solid #c1c1c1; 
+    padding: 7px;
+    top: 10px;
+    left: 10px;
+    padding-left: 32px;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+    width: 240px;
+
+    transition: 0.2s ease background-color;
+}
+
+.admin-panel-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 14px 12px;
+    width: 100%;
+    color: rgb(230, 230, 230);
+}
+
+.admin-panel-button-focused {
+    background-color: #171c20;
+}
+
+.admin-panel-button:hover {
+    color: white;
+}
+
+.selected-colored-slice {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background-color: rgb(58, 186, 236);
+}
+
+.section-card {
+    background-color: rgba(231, 231, 232, 0.16);
+    border: 1px solid #d7d7d7;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.section-card-title {
+    display: block;
+    color: rgb(70, 70, 70);
+    font-weight: bold;
+    text-align: center;
+    font-size: 10px;
+    max-width: 100px;
+    margin-bottom: 6px;
+}
+
+table {
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+
+table td, table th {
+    border: 1px solid #a6a6a6;
+    padding: 8px;
+}
+
+table td {
+    vertical-align: top;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #eee;
+}
+
+#resource-col {
+    width: 100%;
+}
+
+#strike-col {
+    min-width: 200px;
+}
+
+#strike-date {
+    min-width: 120px;
+}
+
+.search-input-text-style {
+    border: 1px solid #c1c1c1;
+    font-size: 12px;
+    min-width: 270px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+    transition: 0.2s ease background-color;
+    border: 1px solid #c1c1c1;
+    font-size: 12px;
+    padding: 10px 10px 10px 30px;
+}
+
+.sfui-icon {
+    position: absolute;
+    left: 11px;
+    top: 11px;
+    fill: #686868;
+}
+
+.search-result-container {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #c1c1c1;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(251, 251, 251);
+
+    max-height: 310px;
+}
+
+.isearch-button {
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    background-color: #e3e3e3;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.isearch-button:hover {
+    background-color: #ddd;
+}
+
+.search-input-style {
+    padding: 8px 80px 8px 32px;
+    border-radius: 4px;
+    border: 1px solid #d0d0d0;
+}
+
+.search-input-style:focus {
+    border-color: rgb(47, 185, 240);
+    outline: 4px solid rgba(33, 192, 255, 0.19);
+}

@@ -1,0 +1,74 @@
+name: Testing
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  laravel-tests:
+    runs-on: ubuntu-latest
+    services:
+      # mysql-service Label used to access the service container
+      mysql-service:
+        image: mysql:8.0.21
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          MYSQL_USER: username
+          MYSQL_DATABASE: testdb
+        ports:
+            - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+    steps:
+    - uses: actions/checkout@v2
+    # ===== Set up PHP =====
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 7.4
+        tools: phpmd
+        extensions: mbstring, dom, fileinfo, mysql
+    # ===== Create .env and fill it with keys from github secret =====
+    - name: Create env file
+      run: |
+        touch .env
+        echo ${{ secrets.DOT_ENV }} | base64 -d > .env
+    # ===== Get composer cache directory =====
+    - name: Get composer cache directory
+      id: composer-cache
+      run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+    # ===== Cache composer dependencies =====
+    - name: Cache composer dependencies
+      uses: actions/cache@v2
+      with:
+        path: ${{ steps.composer-cache.outputs.dir }}
+        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+        restore-keys: ${{ runner.os }}-composer-
+    # ===== Install dependencies & generate key =====
+    - name: Application Setup
+      run: |
+        composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist --ignore-platform-reqs
+        php artisan key:generate
+        php artisan config:cache
+        chmod -R 777 storage bootstrap/cache
+    # ===== Migrate test database =====
+    - name: Migrating test database
+      env:
+        DB_HOST: 172.17.0.2
+      run: php artisan migrate --database='testing' --force --no-interaction
+    # ===== Run tests =====
+    - name: Execute tests (Unit and Feature tests) via PHPUnit
+      env:
+        DB_HOST: 172.17.0.2
+      run: |
+        php artisan key:generate --show
+        php artisan config:clear
+        pwd
+        ls -a
+        cat .env
+        ./vendor/bin/phpunit

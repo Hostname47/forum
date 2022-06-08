@@ -1,0 +1,9 @@
+#login-section {
+    margin: 50px 0;
+}
+
+#auth-viewer-box {
+    box-shadow: 0 0 9px 0 #cecece;
+    border: 1px solid #f7f7f7;
+    width: 380px;
+}

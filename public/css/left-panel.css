@@ -1,0 +1,82 @@
+main {
+    padding-left: 270px;
+}
+
+/* Left-panel */
+#left-panel {
+    position: fixed;
+    left: 0;
+
+    padding: 30px 0 0 46px;
+    color: white;
+    overflow-y: scroll;
+    min-width: 270px;
+    box-sizing: border-box;
+
+    background-color: #4c5371;
+}
+
+.lp-padding {
+    padding: 8px;
+}
+
+.lp-wpadding {
+    padding: 8px;
+}
+
+.left-panel-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    color: rgb(225, 225, 225);
+    text-decoration: none;
+}
+
+.left-panel-item:hover {
+    color: white;
+}
+
+.left-panel-label {
+    font-weight: bold;
+    font-size: 11px;
+    color: rgb(190, 190, 190);
+}
+
+.lp-selected, .lp-sub-selected {
+    background-color: #3b4157;
+}
+
+.selected-colored-slice {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background-color: rgb(58, 186, 236);
+}
+
+.left-panel-sub-items {
+    padding-left: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #79809b;
+}
+
+.lp-sub-item {
+    font-size: 12px;
+    padding: 6px 8px 6px 16px;
+}
+
+.simple-suboptions-container {
+    display: none;
+}
+
+.quick-links-button {
+    color: rgb(225, 225, 225);
+    text-decoration: none;
+    display: block;
+}
+
+.quick-links-button:hover {
+    color: white;
+}

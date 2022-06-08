@@ -1,0 +1,105 @@
+
+main {
+    padding-right: 310px;
+}
+
+.index-right-panel-container {
+    width: 280px;
+    min-width: 280px;
+    margin-left: 10px;
+}
+
+.index-right-panel {
+    padding: 8px;
+}
+
+/* ------------------------------------- */
+
+#right-panel {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 310px;
+    padding: 0;
+    background-color: white;
+    border-left: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.right-panel-header-container {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    background-image: linear-gradient(70deg, rgba(217, 217, 217, 0.18) 21%, rgba(0, 0, 0, 0.04) 117%);
+}
+
+.rp-title {
+    margin: 10px;
+}
+
+.rp-forum-item {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.rp-forum-item:hover {
+    background-color: #7a8096;
+}
+
+.rp-forum-item-selected {
+    background: #373b46;
+}
+
+.selected-colored-slice {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 6px;
+    background-color: rgb(58, 186, 236);
+}
+
+.panel-section-heading-container {
+    height: 46px;
+    background-color: #585d6f;
+}
+
+.panel-section-title {
+    color: white;
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.panel-section-content {
+    padding: 8px;
+}
+
+.panel-section-link {
+    color: black;
+    display: block;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.panel-section-link:hover {
+    text-decoration: underline;
+    color: rgb(58, 186, 236);
+}
+
+.panel-section-item-icon {
+    display: flex;
+    height: 14px;
+    width: 14px;
+    padding-top: 8px;
+    margin-right: 8px;
+}
+
+.panel-section-link-container {
+    margin-bottom: 10px;
+}
